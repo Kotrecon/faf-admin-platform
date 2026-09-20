@@ -10,34 +10,24 @@
 
 ## 🏗️ Архитектура
 
-```bash
-┌─────────────────────────────────────────────────────────────┐
-│                      Admin Shell                             │
-│  • Единый frontend                                           │
-│  • Vanilla JavaScript + Web Components                       │
-│  • Schema renderer                                           │
-│  • Custom module host                                        │
-└────────────────────────────┬──────────────────────────────────┘
-                             │
-                             │ Internal Admin API
-                             ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Portal BFF                                 │
-│  • Administrative entry point                                │
-│  • Service registry / manifests                              │
-│  • API composition / context forwarding                      │
-│  • Thin proxy to service admin APIs                          │
-└────────────────────────────┬──────────────────────────────────┘
-                             │
-      ┌──────────────────────┼───────────────────────────────┐
-      ▼                      ▼                               ▼
-┌───────────────┐    ┌───────────────┐              ┌────────────────┐
-│ Cache Service │    │ AI Router     │              │ Prompting      │
-│ Admin API     │    │ Admin API     │              │ Admin API      │
-│               │    │               │              │                │
-│ Page model:   │    │ Page model:   │              │ Page model:    │
-│ schema + data │    │ schema + data │              │ schema + data  │
-└───────────────┘    └───────────────┘              └────────────────┘
+```mermaid
+flowchart TB
+    A["Admin Shell<br/>Vanilla JS + Web Components<br/>Schema renderer"]
+    B["Portal BFF<br/>Service registry<br/>API composition"]
+    C["Cache Service<br/>schema + data"]
+    D["AI Router<br/>schema + data"]
+    E["Prompting<br/>schema + data"]
+
+    A -->|Internal Admin API| B
+    B --> C
+    B --> D
+    B --> E
+
+    style A fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#fff
+    style B fill:#16213e,stroke:#0f3460,stroke-width:2px,color:#fff
+    style C fill:#0f3460,stroke:#16213e,stroke-width:1px,color:#fff
+    style D fill:#0f3460,stroke:#16213e,stroke-width:1px,color:#fff
+    style E fill:#0f3460,stroke:#16213e,stroke-width:1px,color:#fff
 ```
 
 ## 📦 Структура репозитория

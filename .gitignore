@@ -1,0 +1,105 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.pidb
+*.scc
+*.vspscc
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.npm
+.eslintcache
+
+# .NET
+*.dll
+*.exe
+*.pdb
+*.exe.config
+*.dll.config
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Test results
+TestResults/
+*.trx
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+_temp/
+
+# NuGet
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Build
+dist/
+build/
+out/
+
+# Local settings
+appsettings.local.json
+appsettings.*.local.json
+
+# User-specific files
+*.local.json
+secrets.json
+*.pfx
+*.p12
+
+# Logs
+*.log
+logs/
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
